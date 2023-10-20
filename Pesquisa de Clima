@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #00e88f;
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 4cm;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 2cm;
+            border: none;
+            cursor: pointer;
+        }
+
+        #fugitive-button {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pesquisa de Clima 2023. 2. Hoje é o ÚLTIMO DIA para preencher. Conta pra Foca, você já respondeu?!</h1>
+
+    <div class="button-container">
+        <a href="https://gifdb.com/images/high/michael-scott-celebrating-work-anniversary-in-the-office-71lai1m1a6xxrs8c.gif">
+            <button class="button">Já sim, Foca!</button>
+        </a>
+        <a href="https://app.qulture.rocks/">
+            <button class="button">Vou lá A-G-O-R-A</button>
+        </a>
+        <button id="fugitive-button" class="button">To afim não</button>
+    </div>
+
+    <script>
+        const fugitiveButton = document.getElementById('fugitive-button');
+
+        document.addEventListener('mousemove', (e) => {
+            const maxX = window.innerWidth - fugitiveButton.clientWidth;
+            const maxY = window.innerHeight - fugitiveButton.clientHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            fugitiveButton.style.left = randomX + 'px';
+            fugitiveButton.style.top = randomY + 'px';
+        });
+    </script>
+</body>
+</html>
